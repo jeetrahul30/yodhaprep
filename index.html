@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yodha Prep - Premium Study App</title>
 
-  <a href="login.html">
-  <button>Login</button>
-</a>
-  
+  <!-- Optional: Add your favicon here -->
+  <link rel="icon" href="logo.png" type="image/png" />
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* Reset some default */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -21,23 +19,55 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-   body {
-  background: linear-gradient(270deg, #e0f2fe, #f5f3ff, #e0f2fe);
-  background-size: 600% 600%;
-  animation: gradientMove 20s ease infinite;
-  color: #1f2937;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 60px 20px;
-}
+    body {
+      background: linear-gradient(270deg, #e0f2fe, #f5f3ff, #e0f2fe);
+      background-size: 600% 600%;
+      animation: gradientMove 20s ease infinite;
+      color: #1f2937;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .top-nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    .nav-button {
+      background: linear-gradient(90deg, #4f46e5, #6366f1);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background: linear-gradient(90deg, #6366f1, #4f46e5);
+      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
+    }
+
     .container {
       max-width: 900px;
       width: 100%;
-      background: white;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
       border-radius: 25px;
-      box-shadow: 0 25px 50px rgba(100, 116, 139, 0.1);
+      box-shadow: 0 25px 50px rgba(100, 116, 139, 0.15);
       padding: 50px 40px;
       display: flex;
       flex-direction: column;
@@ -63,14 +93,12 @@
       user-select: none;
     }
 
-    /* Cards container */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
 
-    /* Single card */
     .card {
       background: white;
       border-radius: 20px;
@@ -123,7 +151,6 @@
       box-shadow: 0 15px 40px rgba(99, 102, 241, 0.7);
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       body {
         padding: 30px 15px;
@@ -146,6 +173,11 @@
 </head>
 
 <body>
+  <!-- Top Right Login Button -->
+  <div class="top-nav">
+    <a class="nav-button" href="login.html">Login</a>
+  </div>
+
   <div class="container">
     <h1>Yodha Prep</h1>
     <p class="subtitle">Padho. Ladho. Jeeto.</p>
@@ -170,11 +202,11 @@
       </div>
 
       <div class="card">
-  <h2>🔐 Login</h2>
-  <p>Yodha Prep pe login karo</p>
-  <a class="button" href="login.html">Login Now</a>
-</div>
-   </div>
+        <h2>🔐 Login</h2>
+        <p>Yodha Prep pe login karo aur apni progress track karo.</p>
+        <a class="button" href="login.html">Login Now</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
