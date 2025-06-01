@@ -12,17 +12,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    .top-bar {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  right: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
+    
+/* Logo styling */
+.logo {
+  width: 220px;              /* 💻 Large size for laptop */
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;       /* Center horizontally + bottom space */
+  filter: drop-shadow(3px 5px 10px rgba(0, 0, 0, 0.3));  /* Soft shadow */
+  transition: transform 0.3s ease;
 }
 
+.logo:hover {
+  transform: scale(1.05);    /* Slight zoom effect on hover */
+}
+
+/* Optional wrapper if you're using a heading below logo */
+.logo-wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo-wrapper h1 {
+  font-size: 2.8rem;
+  color: #3b82f6;
+  font-weight: 700;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* 📱 Responsive: Mobile ke liye */
+@media (max-width: 768px) {
+  .logo {
+    width: 140px;            /* Smaller size on mobile */
+    margin-bottom: 20px;
+  }
+
+  .logo-wrapper h1 {
+    font-size: 2rem;
+  }
+}
 .logo img {
   height: 50px;
   width: auto;
