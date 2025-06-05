@@ -4,207 +4,155 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yodha Prep - Premium Study App</title>
   <link rel="icon" href="logo.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(140deg, #e0f2fe, #f5f3ff, #f0f9ff);
-      background-size: 300% 300%;
-      animation: gradientMove 15s ease infinite;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(270deg, #e0f2fe, #f5f3ff, #e0f2fe);
+      background-size: 600% 600%;
+      animation: gradientMove 20s ease infinite;
+      color: #1f2937;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
+      padding: 40px 20px;
     }
-
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    .background-blob {
-      position: absolute;
-      top: -100px;
-      right: -150px;
-      width: 400px;
-      opacity: 0.2;
-      z-index: -1;
-    }
-
-    .top-nav {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-    }
-
-    .nav-button {
-      background: linear-gradient(90deg, #1e40af, #6366f1);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .nav-button:hover {
-      background: linear-gradient(90deg, #6366f1, #1e40af);
-      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
-    }
-
     .container {
-      max-width: 950px;
+      max-width: 1100px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.88);
-      border: 2px solid rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(14px);
-      border-radius: 30px;
-      box-shadow: 0 20px 60px rgba(30, 64, 175, 0.15);
-      padding: 60px 50px;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+      padding: 60px 40px;
     }
-
     .logo {
       width: 260px;
-      height: auto;
       display: block;
       margin: 0 auto 20px;
     }
-
-    .logo-wrapper {
+    h1 {
       text-align: center;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #3b82f6;
     }
-
-    .logo-wrapper h1 {
-      font-size: 3rem;
-      color: #1e40af;
-      font-weight: 800;
-      margin-top: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
     .subtitle {
       text-align: center;
-      font-size: 1.4rem;
-      font-style: italic;
-      color: #475569;
-      font-weight: 500;
-      margin-bottom: 30px;
-      letter-spacing: 0.8px;
+      font-size: 1.25rem;
+      color: #64748b;
+      margin-bottom: 40px;
     }
-
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
-
     .card {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: all 0.4s ease;
-      display: flex;
-      flex-direction: column;
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+      transition: transform 0.3s ease;
     }
-
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
     }
-
     .card h2 {
-      color: #1e40af;
-      font-size: 1.8rem;
-      margin-bottom: 18px;
-      font-weight: 700;
+      font-size: 1.6rem;
+      color: #4f46e5;
+      margin-bottom: 12px;
     }
-
     .card p {
-      font-size: 1.1rem;
-      color: #334155;
-      flex-grow: 1;
-      margin-bottom: 25px;
-      line-height: 1.5;
+      font-size: 1rem;
+      color: #475569;
+      margin-bottom: 20px;
     }
-
     .button {
-      align-self: flex-start;
-      background: linear-gradient(90deg, #1e40af, #6366f1);
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #4f46e5, #6366f1);
       color: white;
-      padding: 14px 30px;
-      border-radius: 999px;
       font-weight: 600;
-      font-size: 1.1rem;
       text-decoration: none;
-      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
-
     .button:hover {
-      background: linear-gradient(90deg, #6366f1, #1e40af);
-      box-shadow: 0 8px 35px rgba(99, 102, 241, 0.6);
+      background: linear-gradient(90deg, #6366f1, #4f46e5);
     }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 20px;
-        align-items: flex-start;
-      }
-      .logo {
-        width: 160px;
-      }
-      .logo-wrapper h1 {
-        font-size: 2.2rem;
-      }
+    .notes-section {
+      margin-top: 20px;
+      padding-left: 15px;
     }
-  </style></head><body>
-  <div class="top-nav">
-    <a class="nav-button" href="login.html">Login</a>
-  </div>  <div class="container">
-    <div class="logo-wrapper">
-      <img class="logo" src="logo1.jpeg" alt="Yodha Prep Logo" />
-      <h1>Yodha Prep</h1>
-      <p class="subtitle">Abb Foundation hogi strong – BY RAHUL PANDA</p>
-    </div><div class="cards">
-  <div class="card">
-    <h2>🎥 Video Classes</h2>
-    <p>Best recorded lectures for your B.Sc. Chemistry preparation. Anytime, anywhere!</p>
-    <a class="button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch Videos</a>
-  </div>
-
-  <div class="card">
-    <h2>📄 Download Notes</h2>
-    <p>Comprehensive, easy-to-understand notes ready for download. Study smarter!</p>
-    <a class="button" href="notes.html">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <h2>📝 Take Tests</h2>
-    <p>Test your knowledge with interactive quizzes and track your progress.</p>
-    <a class="button" href="quiz.html">Start Quiz</a>
-  </div>
-
-  <div class="card">
-    <h2>🔐 Login</h2>
-    <p>Yodha Prep pe login karo aur apni progress track karo.</p>
-    <a class="button" href="login.html">Login Now</a>
-  </div>
-</div>
-
+    .notes-section h3 {
+      margin-top: 10px;
+      color: #334155;
+      font-size: 1.1rem;
+    }
+    .notes-section ul {
+      list-style: none;
+      padding-left: 10px;
+    }
+    .notes-section li a {
+      text-decoration: none;
+      color: #1d4ed8;
+    }
+    .notes-section li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="logo1.jpeg" alt="Yodha Prep Logo">
+    <h1>Yodha Prep</h1>
+    <p class="subtitle">Abb Foundation hogi strong  BY-RAHUL PANDA.</p>
+    <div class="cards">
+      <div class="card">
+        <h2>🎥 Video Classes</h2>
+        <p>Best recorded lectures for your B.Sc. Chemistry preparation. Anytime, anywhere!</p>
+        <a class="button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch Videos</a>
+      </div>
+      <div class="card">
+        <h2>📄 Download Notes</h2>
+        <p>Comprehensive, easy-to-understand notes ready for download. Study smarter!</p>
+        <div class="notes-section">
+          <h3>📁 Unit 1 - Atomic Structure</h3>
+          <ul>
+            <li><a href="notes/unit1/lecture_notes.pdf" download>Lecture Notes</a></li>
+            <li><a href="notes/unit1/formulas.pdf" download>Formula Sheet</a></li>
+          </ul>
+          <h3>📁 Unit 2 - Chemical Bonding</h3>
+          <ul>
+            <li><a href="notes/unit2/concepts.pdf" download>Concept Notes</a></li>
+            <li><a href="notes/unit2/questions.pdf" download>Important Questions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <h2>📝 Take Tests</h2>
+        <p>Test your knowledge with interactive quizzes and track your progress.</p>
+        <a class="button" href="quiz.html">Start Quiz</a>
+      </div>
+      <div class="card">
+        <h2>🔐 Login</h2>
+        <p>Yodha Prep pe login karo aur apni progress track karo.</p>
+        <a class="button" href="login.html">Login Now</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
