@@ -235,16 +235,46 @@
 
       <div class="card">
   <h2>📄 Download Notes</h2>
-  <p>DOWNLOAD NOTES FROM HERE:</p>
+  <p>Click here:</p>
 
-  <div style="display: flex; flex-direction: column; gap: 15px;">
-    <a class="button" href="notes/unit1_chemical_equilibrium.pdf" download>📘 Unit 1: Chemical Equilibrium</a>
-    <a class="button" href="notes/unit2_ionic_equilibrium.pdf" download>📗 Unit 2: Ionic Equilibrium</a>
-    <a class="button" href="notes/unit3_thermodynamics.pdf" download>📙 Unit 3: Thermodynamics</a>
-    <a class="button" href="notes/unit4_electrochemistry.pdf" download>📕 Unit 4: Electrochemistry</a>
-    <a class="button" href="notes/unit5_surface_chemistry.pdf" download>📓 Unit 5: Surface Chemistry</a>
+  <!-- Unit 1 -->
+  <div onclick="toggle('unit1')" style="cursor: pointer; font-weight: bold; margin-top: 15px;">
+    🔻 Unit 1: Chemical Equilibrium
+  </div>
+  <div id="unit1" style="display: none; margin-left: 20px; margin-top: 10px;">
+    <a class="button" href="notes/unit1_note1.pdf" download>📘 Note 1</a><br><br>
+    <a class="button" href="notes/unit1_note2.pdf" download>📘 Note 2</a>
+  </div>
+
+  <!-- Unit 2 -->
+  <div onclick="toggle('unit2')" style="cursor: pointer; font-weight: bold; margin-top: 15px;">
+    🔻 Unit 2: Ionic Equilibrium
+  </div>
+  <div id="unit2" style="display: none; margin-left: 20px; margin-top: 10px;">
+    <a class="button" href="notes/unit2_note1.pdf" download>📗 Note 1</a><br><br>
+    <a class="button" href="notes/unit2_note2.pdf" download>📗 Note 2</a>
+  </div>
+
+  <!-- Unit 3 -->
+  <div onclick="toggle('unit3')" style="cursor: pointer; font-weight: bold; margin-top: 15px;">
+    🔻 Unit 3: Thermodynamics
+  </div>
+  <div id="unit3" style="display: none; margin-left: 20px; margin-top: 10px;">
+    <a class="button" href="notes/unit3_note1.pdf" download>📙 Note 1</a>
   </div>
 </div>
+
+<script>
+  function toggle(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+  
   
       <div class="card">
         <h2>📝 Take Tests</h2>
